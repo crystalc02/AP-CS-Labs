@@ -1,0 +1,111 @@
+public class matrixlab
+{
+   public static void main(String[] args)
+   {
+      String mat[][] = new String[5][5];
+      createMat(mat);
+      displayRowMajor(mat);
+      System.out.println();
+      displayColumnMajor(mat);
+      System.out.println();
+      displayRowMajorBackwards(mat);
+      System.out.println();
+      displayColumnMajorBackwards(mat);
+      System.out.println("Even or zero");
+      displayFive(mat);
+      System.out.println("Same indices");
+      displaySame(mat);
+      System.out.println("Telescope order");
+      telescopeOrder(mat);
+   }
+   public static void createMat(String[][] mat)
+   {      
+      for(int r = 0;r<5;r++)
+         for(int c = 0;c<5;c++)
+         {
+            mat[r][c]="["+r+"]"+"["+c+"]";
+         }
+   } 
+   public static void displayRowMajor(String[][]matrix)
+   {
+      for(String[] row: matrix)
+      {
+         for(String number: row)
+            System.out.print(number+" ");
+         System.out.println();
+      }
+   }
+   public static void displayColumnMajor(String[][]matrix)
+   {
+      for(int column = 0;column<matrix.length;column++)
+      {
+         for(int row = 0;row<matrix.length;row++)
+            System.out.print(matrix[row][column]+" ");
+         System.out.println();
+      }
+   }
+   public static void displayRowMajorBackwards(String[][]matrix)
+   {
+      for(int row = 0;row<matrix.length;row++)
+      {
+         for(int column = matrix.length-1;column>=0;column--)
+            System.out.print(matrix[row][column]+" ");
+         System.out.println();
+      }
+   }
+   public static void displayColumnMajorBackwards(String[][]matrix)
+   {
+      for(int column = matrix.length-1;column>=0;column--)
+      {
+         for(int row = 0;row<matrix.length;row++)
+            System.out.print(matrix[row][column]+" ");
+         System.out.println();
+      }
+      System.out.println();
+   }
+   public static void displayFive(String[][]matrix)
+   {
+      for(int row = 0;row<matrix.length;row++)
+      {
+         for(int column = 0;column<matrix.length;column++)
+         {
+            if((row==0&&column==0)||(row%2==0&&column%2==0))
+               System.out.print(matrix[row][column]+ " ");
+         }        
+           System.out.println(); 
+      } 
+   }
+   public static void displaySame(String[][]matrix)
+   {
+      for(int row = 0;row<matrix.length;row++)
+      {
+         for(int column = 0;column<matrix.length;column++)
+         {
+            if((row==column))
+               System.out.print(matrix[row][column]+ " ");
+         }        
+           System.out.println(); 
+      } 
+   }
+   public static void telescopeOrder(String[][]matrix)
+   {
+      int row = 0;
+      while(row<matrix.length)
+      {         
+         if(row%2==0)
+         {
+            for(int column = 0;column<matrix.length;column++)
+               System.out.print(matrix[row][column]+" ");
+            System.out.println();
+         }
+         else
+         {
+            for(int column = matrix.length-1;column>=0;column--)
+               System.out.print(matrix[row][column]+" ");
+            System.out.println();
+         }
+        row++;
+      }
+   }
+            
+}
