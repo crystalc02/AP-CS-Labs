@@ -1,0 +1,20 @@
+public class TriangleOne
+{
+   //this lab is setup with a single static method
+   //there are no instance variables or additional methods / constructors
+
+	public static String createTriangle( String let, int size)
+	{
+		String output="";
+      
+      for(int i=1; i<=size;i++)
+      {
+         for(int y=1; y<=i;y++)
+         {
+            output= output+let;
+         }
+         output=output+"\n";
+      }
+		return output;
+	}
+}
