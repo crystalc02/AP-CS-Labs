@@ -1,0 +1,127 @@
+// Lab10vst.java
+import java.awt.*;
+import java.applet.*;
+
+public class Lab10vst extends Applet
+{
+   public void paint(Graphics g)
+   {
+      Firtree ft1 = new Firtree(g,200);
+      Firtree ft2 = new Firtree(g,1100);
+      Christmastree ct1 = new Christmastree(g,650);
+   }
+}
+
+class Tree
+{
+   public Tree(Graphics g, int x)
+   {
+      g.setColor(new Color(66,33,0));
+      g.fillRect(x-50,500,75,175);
+      g.setColor(new Color(0,64,0));
+   }
+}
+interface Firtree1
+{
+   public void drawTop(Graphics g);
+   public void drawMiddle(Graphics g);
+   public void drawBottom(Graphics g);
+}      
+class Firtree extends Tree implements Firtree1
+{
+   private int x1;
+   public Firtree(Graphics g, int x)
+   {
+      super(g,x);
+      x1=x;
+      drawTop(g);
+      drawMiddle(g);
+      drawBottom(g);
+   }
+   public void drawTop(Graphics g)
+   {   
+      Polygon top = new Polygon();
+      top.addPoint(x1,100);
+      top.addPoint(x1-100,250);
+      top.addPoint(x1+100,250);
+      g.fillPolygon(top);
+   }
+   public void drawMiddle(Graphics g)
+   {
+      Polygon middle = new Polygon();
+      middle.addPoint(x1,175);
+      middle.addPoint(x1-150,375);
+      middle.addPoint(x1+150,375);
+      g.fillPolygon(middle);
+   }
+   public void drawBottom(Graphics g)
+   {
+      Polygon bottom = new Polygon();
+      bottom.addPoint(x1,275);
+      bottom.addPoint(x1-200,525);
+      bottom.addPoint(x1+200,525);
+      g.fillPolygon(bottom);
+   }     
+}
+class Christmastree extends Firtree
+{
+   private int x1;
+   private BigOrnaments bigornament;
+   private Star star;
+   private SmallOrnaments smallornament;
+   public Christmastree(Graphics g, int x)
+   {
+      super(g,x);
+      x=x1;
+      bigornament = new BigOrnaments(g);
+      smallornament = new SmallOrnaments(g);
+      star = new Star(g);
+   }
+}
+class BigOrnaments
+{
+   public BigOrnaments(Graphics g)
+   {
+      g.setColor(new Color(255,0,0));
+      g.fillOval(625,300,50,50);
+      g.setColor(new Color(255,0,128));
+      g.fillOval(595,175,50,50);
+      g.setColor(new Color(26,119,255));
+      g.fillOval(600,400,50,50);
+      g.setColor(new Color(0,0,225));
+      g.fillOval(680,450,50,50);
+   }
+}
+class Star
+{
+   public Star(Graphics g)
+   {
+      g.setColor(Color.yellow);
+      Polygon up = new Polygon();
+      up.addPoint(650,110);
+      up.addPoint(625,60);
+      up.addPoint(675,60);
+      g.fillPolygon(up);
+      Polygon down = new Polygon();
+      down.addPoint(650,50);
+      down.addPoint(625,90);
+      down.addPoint(675,90);
+      g.fillPolygon(down);
+    }
+}
+class SmallOrnaments
+{
+   public SmallOrnaments(Graphics g)
+   {
+      g.setColor(new Color(255,255,0));
+      g.fillOval(560,475,25,25);
+      g.setColor(new Color(0,250,15));
+      g.fillOval(575,350,25,25);
+      g.setColor(new Color(128,0,235));
+      g.fillOval(770,480,25,25);
+      g.setColor(new Color(225,80,10));
+      g.fillOval(650,175,25,25);
+      g.setColor(new Color(100,100,100));
+      g.fillOval(690,300,25,25);
+   }      
+}
