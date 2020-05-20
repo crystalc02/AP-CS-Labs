@@ -1,0 +1,175 @@
+import java.awt.*;
+import java.applet.*;
+
+
+public class Lab05vst extends Applet
+{
+	public void paint(Graphics g)
+	{
+		int width = 980;
+		int height = 630;
+		int x1 = 10;
+		int y1 = 640;
+		int x2 = 990;
+		int y2 = 640;
+		g.drawRect(10,10,width,height);
+    
+    
+    for (int k=1;k<=45;k++)
+    {
+     g.setColor(Color.cyan);
+     g.drawLine(x1,640,990,y2-10);
+     x1+=21;
+     y2-=14;
+    }
+    
+   //Draw bottom-right corner
+   
+    for(int k=1;k<=45;k++)
+   {
+     g.setColor(Color.green);
+     g.drawLine(10,y1-10,x2,640);
+     y1-=14;
+     x2-=21;
+    }
+   
+  //Draw top-left corner
+  
+    for(int k=1;k<=45;k++)
+    {
+     g.setColor(Color.magenta);
+     g.drawLine(990,y1,x2,10);
+     y1+=14;
+     x2+=21;
+    }
+  
+   
+  //Draw top-right corner
+  
+    for(int k=1;k<=45;k++)
+    {
+     g.setColor(Color.yellow);
+     g.drawLine(x2,10,10,y2);
+     y2+=14;
+     x2-=21;
+    }
+   
+	}
+}
+ /*  for (int k1=1; k1<=48; k1++)
+			{
+			g.drawLine(10, y1, x2, 640);
+			x2-=20;
+			y1-=13;
+			}
+		//bottom left	
+			for (int k=1;k<=48;k++)
+			{
+		    g.drawLine(x1,640,990,y2);
+		    x1+=20;
+		    y2-=13;
+		    }
+			//top right
+			for (int k2=1;k2<=48;k2++)
+			{
+		    g.drawLine(990,y1,x2,10);
+		    x2+=20;
+		    y1+=13;
+		    }
+		//top left
+			for (int k3=1; k3<=48; k3++)
+			{
+			g.drawLine(x2, 10, 10, y2);
+			x2-=20;
+			y2+=13;
+			}
+      */
+          //Draw bottom-left corner
+    //smaller
+  /*  int x3=243;
+    int y3=480;
+    int x4=745;
+    int y4=168;
+    for (int k=1;k<=45;k++)
+    {
+     g.setColor(Color.cyan);
+     g.drawLine(x3,480,745,y3-10);
+     x1+=21;
+     y2-=14;
+    }
+    
+   //Draw bottom-right corner
+   
+    for(int k=1;k<=45;k++)
+   {
+     g.setColor(Color.green);
+     g.drawLine(10,y1-10,x2,640);
+     y1-=14;
+     x2-=21;
+    }
+   
+  //Draw top-left corner
+  
+    for(int k=1;k<=45;k++)
+    {
+     g.setColor(Color.magenta);
+     g.drawLine(990,y1,x2,10);
+     y1+=14;
+     x2+=21;
+    }
+  
+   
+  //Draw top-right corner
+  
+    for(int k=1;k<=45;k++)
+    {
+     g.setColor(Color.yellow);
+     g.drawLine(x2,10,10,y2);
+     y2+=14;
+     x2-=21;
+    }
+ //Inside top left
+   /*for(int k=1;k<36;k++)
+   {
+    g.setColor(Color.blue);
+    g.drawLine(255,y1+6,x2,167);
+    x2-=9;
+    y1+=6;
+   }
+      for(int i = 0; i < z; i++)
+      {
+      int x = (x2/z)*i;
+      int y = y1-(y1/z)*i;
+      g.drawLine(x, 630, 980, y);
+      }      
+      for(int i = 0; i < z; i++)
+      {
+      int x = (x2/z)*i;
+      int y = y2+(y2/z)*i;
+      g.drawLine(x, 10, 980,y );
+      }
+      for(int k=1;k<60;k++)
+      {
+         g.drawLine(x1,y1,x2,y2);
+         x1+=10;
+         y2-=8;
+      }*/
+      /*for(int k=1;k<60;k++)
+      {
+         g.drawLine(x2,y1,x1,y2);
+         x2-=10;
+         y2-=8;
+      }*/
+      /*for(int k=1;k<60;k++)
+      {
+         g.drawLine(x1,y3,10,y1);
+         x1+=5;
+         y3-=5;
+      }*/
+      /*for(int k=1;k<60;k++)
+      {
+         g.drawLine(x3,y3,x2,y2);
+         x3-=5;
+         y3+=5;
+         x2-=10;
+      }*/
