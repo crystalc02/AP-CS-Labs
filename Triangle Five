@@ -1,0 +1,52 @@
+import static java.lang.System.*;
+
+public class TriangleFive
+{
+   private char letter;
+   private int amount;
+
+	public TriangleFive()
+	{
+	}
+
+	public TriangleFive(char c, int amt)
+	{
+      letter = c;
+      amount = amt;
+      setLetter(letter);
+      setAmount(amount);
+	}
+
+	public void setLetter(char c)
+	{
+      letter = c;
+	}
+
+	public void setAmount(int amt)
+	{
+      amount = amt;
+	}
+
+	public String toString()
+	{
+		String output="";
+      for(int x=1;x<=amount;x++)
+      {
+         
+         for(int a=amount;a>=x;a--)
+         {
+               for(int y=-a+amount;y<amount;y++)
+               {
+                  char z=letter;
+                  z+=(-a+amount);
+                  if(z>'Z')
+                     z-=26;
+                  output+= z;
+               }               
+            output+= " ";
+         }
+         output+="\n";      
+      }
+		return output;
+	}
+}
