@@ -1,0 +1,21 @@
+public class Lab04a
+{
+   public static void main (String[] args)
+   {
+      System.out.println("Lab04 Student Version\n");
+      double principal=250000;
+      double annualRate=4.85;
+      double numYears=30;
+      System.out.println("Principal:   $"+ principal);
+      System.out.println("Annual Rate:   "+ annualRate + "%");
+      System.out.println("Number of Years:   "+ numYears);
+      double months=numYears*12;
+      double monthlypayment=(annualRate/1200)*(Math.pow((1+(annualRate/1200)),months));
+      monthlypayment/=(Math.pow((1+(annualRate/1200)),months)-1);
+      monthlypayment*=principal;
+      System.out.println("Monthly Payment:   $"+Math.round(monthlypayment*100.0)/100.0); 
+      double totalpayment= monthlypayment*months;
+      System.out.println("Total Payments:   $"+Math.round(totalpayment*100.0)/100.0);
+      System.out.println("Total Interest:   $"+ Math.round((totalpayment-principal)*100.0)/100.0);
+   }
+}   
