@@ -1,0 +1,83 @@
+import java.awt.*;
+import java.applet.*;
+import java.util.*; 
+																
+
+public class Lab06vst extends Applet
+{
+	
+	public void paint(Graphics g) 	
+	{
+		// Draw Grid
+		g.drawRect(10,10,780,580);
+		g.drawLine(400,10,400,590);
+		g.drawLine(10,300,790,300);
+				
+		
+		// Draw Random Lines
+      for(int k=1;k<=100;k++)
+      {
+      g.setColor(new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)));
+      int x1 = (int)(Math.random()*350+10);
+      int y1 = (int)(Math.random()*250+10);
+      int x2 = (int)(Math.random()*350+10);
+      int y2 = (int)(Math.random()*250+10);
+      g.drawLine(x1,y1,x2,y2);
+      }
+
+				
+		
+		// Draw Random Squares
+      for (int k=1;k<=100;k++)
+      {
+      g.setColor(new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)));
+      int x1 = (int)(Math.random()*325+400);
+      int y1 = (int)(Math.random()*225+10);    
+      g.fillRect(x1,y1,50,50);
+      }
+
+
+
+		
+		// Draw Random Circles
+      for(int k=1;k<=100;k++)
+      {
+      g.setColor(new Color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255)));
+      int x1 = (int)(Math.random()*200+10);
+      int y1 = (int)(Math.random()*90+300);
+      int diameter = (int)(Math.random()*200);
+      g.drawOval(x1,y1,diameter,diameter);
+      }
+
+
+		
+		// Draw 3-D Box
+	   Polygon cube = new Polygon();
+      g.setColor(Color.green);
+      cube.addPoint(515,380);
+      cube.addPoint(515,480);
+      cube.addPoint(560,520);
+      cube.addPoint(560,420);
+      g.fillPolygon(cube);
+      g.setColor(Color.red);
+      g.fillRect(560,420,100,100);
+      g.setColor(Color.yellow);
+      Polygon trapezoid = new Polygon();
+      trapezoid.addPoint(515,380);
+      trapezoid.addPoint(560,420);
+      trapezoid.addPoint(610,420);
+      trapezoid.addPoint(610,380);
+      g.fillPolygon(trapezoid);
+      g.setColor(Color.blue);
+      Polygon tri = new Polygon();
+      tri.addPoint(610,380);
+      tri.addPoint(610,420);
+      tri.addPoint(660,420);
+      g.fillPolygon(tri);
+	
+	
+	
+	
+	}
+		
+}
