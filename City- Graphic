@@ -1,0 +1,75 @@
+//part of lab07 graphics main
+import java.awt.*;
+import java.applet.*;
+public class City
+{
+   public static void drawBuilding1(Graphics g)
+   {
+      g.setColor(Color.darkGray);
+      g.fillRect(150,200,150,350);
+   }
+   public static void drawWindow1(Graphics g)
+   {
+      g.setColor(new Color(179,166,9));
+      g.fillRect(170,225,50,50);
+      g.fillRect(235,225,50,50);
+      g.setColor(Color.black);
+      g.fillRect(170,300,50,50);
+      g.setColor(new Color(179,166,9));
+      g.fillRect(235,300,50,50);
+      g.fillRect(170,375,50,50);
+      g.setColor(Color.black);
+      g.fillRect(235,375,50,50);
+      g.fillRect(170,450,50,50);
+      g.setColor(new Color(179,166,9));
+      g.fillRect(235,450,50,50);
+   }
+   public static void drawBuilding2(Graphics g)
+   {
+      g.setColor(Color.darkGray);
+      g.fillRect(400,100,175,450);  
+   }
+   public static void drawWindow2(Graphics g)
+   {
+      g.setColor(new Color(179,166,9));
+      g.fillRect(420,125,50,50);
+      g.setColor(Color.black);
+      g.fillRect(500,125,50,50);
+      g.fillRect(420,200,50,50);
+      g.fillRect(500,200,50,50);
+      g.setColor(new Color(179,166,9));
+      g.fillRect(420,275,50,50);
+      g.setColor(Color.black);
+      g.fillRect(500,275,50,50);
+      g.setColor(new Color(179,166,9));
+      g.fillRect(420,350,50,50);
+      g.fillRect(500,350,50,50);
+      g.fillRect(420,425,50,50);
+      g.fillRect(500,425,50,50);
+   }
+   public static void drawBuilding3(Graphics g)
+   {
+      g.setColor(Color.darkGray);
+      g.fillRect(700,150,150,400);
+   }
+   public static void drawWindow3 (Graphics g)
+   {
+      g.setColor(Color.black);
+      g.fillRect(720,175,50,50);
+      g.setColor(new Color(179,166,9));
+      g.fillRect(780,175,50,50);
+      g.fillRect(720,250,50,50);
+      g.setColor(Color.black);
+      g.fillRect(780,250,50,50);
+      g.setColor(new Color(179,166,9));
+      g.fillRect(720,325,50,50);
+      g.setColor(Color.black);
+      g.fillRect(780,325,50,50);
+      g.setColor(new Color(179,166,9));
+      g.fillRect(720,400,50,50);
+      g.fillRect(780,400,50,50);
+      g.setColor(Color.black);
+      g.fillRect(720,475,50,50);
+      g.fillRect(780,475,50,50);
+   }
+}
