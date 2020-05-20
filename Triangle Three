@@ -1,0 +1,70 @@
+import static java.lang.System.*;
+
+public class TriangleThree
+{
+   private int size;
+   private String letter;
+
+	public TriangleThree()
+	{
+   
+	}
+
+	public TriangleThree(int count, String let)
+	{
+      size=count;
+      letter=let;
+      setTriangle(letter,size);
+	}
+
+	public void setTriangle( String let, int sz )
+	{
+      size= sz;
+      letter = let;
+      toString();
+	}
+
+	public String getLetter() 
+	{
+		return "#";
+	}
+
+	public String toString()
+	{
+	 String output= "";	      
+    for(int i=1; i<=size; i++)
+    {
+        for(int y=i; y<size; y++)
+        {
+            output+=" ";
+        }
+
+        for(int y=1; y<=i; y++)
+        {
+            output+=letter;
+        }
+
+        output+="\n";
+    }
+	return output;
+	}
+}
+/* for(int i=1; i<=size;i++)
+      {
+         for(int y=1; y<=i;y++)
+         {
+            String x = " ";
+            for (int z=1; z<size; z++)
+            {
+               x = x+" ";
+            }
+            output = x+output;
+         }
+         for (int y=1; y<=i;y++)
+         {
+            output= output+letter;
+            
+            
+         }
+         output=output+"\n";
+      }*/
