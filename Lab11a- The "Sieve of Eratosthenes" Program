@@ -1,0 +1,92 @@
+import java.util.Scanner;
+
+public class Lab11avst
+{
+	public static void main(String[] args)
+	{
+		// This main method needs additions for the 100 point version.
+		Scanner input = new Scanner(System.in);
+      System.out.print("Enter the primes upper bound ===>>  ");
+		final int MAX = input.nextInt();
+		boolean primes[] = new boolean[MAX];
+		computePrimes(primes);
+		displayPrimes(primes);
+	}
+
+	public static void computePrimes(boolean primes[])
+	{
+		System.out.println("\nCOMPUTING PRIME NUMBERS");
+      for(int i=2; i<primes.length;i++)
+         primes[i]=true;
+      for(int x=2; x<primes.length;x++)
+      {
+         if(primes[x]==true)
+         {
+            for(int i=x*2; i<primes.length; i+=x)
+               primes[i]=false;
+         }
+      }      
+	}
+	public static void displayPrimes(boolean primes[])
+	{
+		System.out.println("\n\nPRIMES BETWEEN 1 AND "+ primes.length);
+		int x=0;
+      for (int k = 1; k < primes.length; k++)
+      {
+         if(primes[k]== true)
+         {   
+            if(k<10)
+            {
+               System.out.print("000"+k+ " ");
+               x++;
+            }
+            else if(k<100)
+            { 
+               System.out.print("00"+k+" ");
+               x++;
+            }
+            else if(k<1000)
+            {
+               System.out.print("0"+k+ " ");
+               x++;
+            }
+            else if(k<10000)
+            {
+			      System.out.print(k+ " ");
+               x++;
+            }
+         }
+         if(x>15)
+         {   
+            System.out.println();
+            x=0;
+         }
+      }
+
+
+	}
+
+}
+/*for(int a=0;a<primes.length;a++)
+      {
+         if(a==2)
+            primes[a] = true;
+         else if(a==1)
+            primes[a] = false;
+         else if(a==3||a==5)
+            primes[a]= true;
+         else if(a%2==0)
+            primes[a] = false;
+         else if(a%3==0)
+            primes[a] = false;
+         else if(a%5==0)
+            primes[a] = false;
+         else if(a%7==0)
+            primes[a] = false;
+         else if(a%11==0)
+            primes[a] = false;
+         else if(a%13==0||a%17==0||a%19==0)
+            primes[a] = false;
+         else 
+            primes[a] = true;
+      }*/
