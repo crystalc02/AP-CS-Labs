@@ -1,0 +1,164 @@
+import static java.lang.System.*;
+
+class TriangleWord
+{
+   private String word;
+
+	public TriangleWord()
+	{
+	}
+
+	public TriangleWord(String w)
+	{
+      word = w;
+      setWord(word);
+	}
+
+	public void setWord(String w)
+	{
+      word = w;
+      toString();
+	}
+
+	public String toString()
+	{
+	   String output="";
+      int length = word.length();
+      String less = word.substring(0,length-1);
+      String less2 = word.substring(1, length-1);
+      for (int z=1; z<=less.length(); z++)
+      {
+         output = output + " ";
+      }
+      output = output + less.charAt(0) + "\n";
+   
+      for (int a=less2.length(); a>0; a--)
+      {
+         for (int c=0; c<a; c++)
+         {
+            output = output + " ";
+         }
+         output = output + word.charAt(less.length()-a) + " ";
+   
+         for (int d=less2.length()-a; d>0; d--)
+         {
+            output=output + "  ";
+         }
+         output = output + word.charAt(less.length()-a) + "\n";
+      }      
+      for (int b=word.length()-1; b>=0; b--) 
+      {
+         output = output + word.charAt(b);
+      }
+   return output + word.substring(1);     
+
+   }
+}
+/*String output="";
+       
+      StringBuffer sb = new StringBuffer(word);		
+		int count = 0;
+		int count2 = 1;
+		if (word.length() == 1)
+			return word;
+		if (word.length() % 2 == 1)
+			for (int q = 0; q < (word.length() / 2); q++) 
+         {
+				output += " ";
+			}
+		else
+			for (int q = 0; q < (word.length() / 2) - 1; q++)
+				output += "  ";
+		for (int p = 0; p < word.length(); p++)
+         {
+			   for (int i = 0; i < (word.length() / 2) - 1; i++) 
+            {
+				   output += "  ";
+			   }
+			   if (count < word.length() - 1) 
+            {
+			   	output += " " + word.charAt(count) + "\n";
+			   	count++;
+			   }
+			   for (int k = 1; k < count; k++) 
+            {
+			   	output += "";
+			   }
+			   if (count2 < word.length() - 1) 
+            {
+			   	output += " " + word.charAt(count2);
+			   	count2++;
+			   }
+		   }
+		output += sb.reverse();
+      output+=(word.substring(1));
+      output+="\n";
+      return output;*/
+ /*for (int a = word.length()-1; a >= 1; a--)
+         {
+            for (int b = 1; b < word.length(); b++)
+            {
+               output+=" ";
+            }
+            output+=(word.charAt(word.length()-1-a))+ "\n";
+         }
+         for (int c = 0; c < word.length(); c++)
+         {
+            output+=(word.charAt(word.length()-1-c));  
+         }*/
+ /*for(int i = 0; i < word.length(); i++)
+     {
+         for(int j=i;j<word.length()/2+2;j++)
+         {
+            output+=" ";
+         }
+         output+= word.charAt(i);
+         if(i!=0&&i!=word.length())
+         {
+            for(int j=i;j<word.length()/2+2;j++)
+            {
+               output+=" ";
+            }
+            output+=word.charAt(i);
+         }
+         else
+         {
+         for(int j=i;j<word.length()/2+2;j++)
+         {
+            output+=" ";
+         }*/
+
+/*for(int j = 0; j < word.length(); j++)
+         {
+                //Print the last line, or those that have distance equals i to the center of the last line
+            if(i + 1 == word.length() || Math.abs(j - word.length()/2) == i)
+            {
+               if((i==1&&j==0)||(i==0&&j==0))
+               output+=" ";
+               output+=(word.charAt(i));
+               
+            }
+            else
+            {
+               output+=" ";
+            }
+     }
+            output+="\n";*/
+     /*int x=word.length();
+     for(int i = 1; i <= x; i++)
+     {
+      //for loop to put space in pyramid
+      for (int space = i; space < x-1; space++)
+         output+=" ";
+      //for loop to print star
+      for(int j = 1; j <= (2 * x - 1); j++)
+      {
+         if(i == x || j == 1 || j == 2*i - 1)
+            output+=word.charAt(j);
+         else
+            output+=" ";
+      }*/
+      
+	
+
+
