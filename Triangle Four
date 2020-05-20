@@ -1,0 +1,49 @@
+import static java.lang.System.*;
+
+public class TriangleFour
+{
+   private int size;
+   private String letter;
+
+	public TriangleFour()
+	{
+	}
+
+	public TriangleFour(int count, String let)
+	{
+      size = count;
+      letter = let;
+      setTriangle(letter,size);
+	}
+
+	public void setTriangle( String let, int sz )
+	{
+      size  = sz;
+      letter= let;
+      toString();
+	}
+
+	public String getLetter() 
+	{
+		return "#";
+	}
+
+	public String toString()
+	{
+		String output="";
+      for (int i=1; i<=size;i++)
+      {
+         for(int k=1;k<i;k++)
+         {
+            output = output+ " ";
+         }
+         for (int j=0;j<=(size-i);j++)
+         {
+            output = output + letter;
+            
+         }
+		   output = output + "\n";
+      }
+      return output+"\n";
+	}
+}
