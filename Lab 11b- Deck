@@ -1,0 +1,49 @@
+public class Lab11bvst
+{
+	public static void main(String[] args)
+	{ 
+      Deck cards = new Deck();
+    
+	}
+}
+
+
+class Deck 
+{
+	private String[] cards = new String[53];
+	private int size;
+   private String[]suit = {"Clubs","Diamonds","Hearts","Spades"};
+   private String[]name= {"Ace","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Jack","Queen","King"};
+   private String[]value={"1","2","3","4","5","6","7","8","9","10","11","12","13"};
+
+	public Deck() 
+   {
+      size = 52;
+      toString();
+      shuffle();
+   }
+   public String toString()
+   {
+      String temp = "";
+      for (int k = 0; k < 13; k++)
+         cards[k] = suit[0] +", "+ name[k] +", "+ value[k];
+      for (int k = 0; k < 13; k++)
+         cards[k+13] = suit[1] +", "+ name[k] +", "+ value[k];
+      for (int k = 0; k < 13; k++)
+         cards[k+26] = suit[2] +", "+ name[k] +", "+ value[k];
+      for (int k = 0; k < 13; k++)
+         cards[k+39] = suit[3] +", "+ name[k] +", "+ value[k];
+      //for (int k = 0; k < 52; k++)
+		//	System.out.println("["+cards[k]+"]");         
+      return " ";
+   }
+   public String shuffle()
+   {
+      for(int x=0;x<=1000;x++)
+      {
+         System.out.println("["+cards[(int)(Math.random()*52)]+"]");
+      }
+    return " ";
+   }
+    
+ }
