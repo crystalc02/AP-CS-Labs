@@ -1,0 +1,48 @@
+//part of lab07 Graphics main
+import java.awt.*;
+import java.applet.*;
+public class tree
+{
+   public static void tree1 (Graphics g)
+   {
+      g.setColor(new Color(53,28,29));
+      g.fillRect(50,450,30,125);
+      g.setColor(new Color(0,100,0));
+      Polygon top = new Polygon();
+      top.addPoint(60,150);
+      top.addPoint(25,275);
+      top.addPoint(95,275);
+      g.fillPolygon(top);
+      Polygon middle = new Polygon();
+      middle.addPoint(60,245);
+      middle.addPoint(10,375);
+      middle.addPoint(110,375);
+      g.fillPolygon(middle);
+      Polygon bottom = new Polygon();
+      bottom.addPoint(60,350);
+      bottom.addPoint(0,470);
+      bottom.addPoint(130,470);
+      g.fillPolygon(bottom);
+   }
+   public static void tree2 (Graphics g)
+   {
+      g.setColor(new Color(53,28,29));
+      g.fillRect(910,450,30,125);
+      g.setColor(new Color(0,100,0));
+      Polygon top = new Polygon();
+      top.addPoint(920,150);
+      top.addPoint(885,275);
+      top.addPoint(955,275);
+      g.fillPolygon(top);
+      Polygon middle = new Polygon();
+      middle.addPoint(920,245);
+      middle.addPoint(870,375);
+      middle.addPoint(970,375);
+      g.fillPolygon(middle);
+      Polygon bottom = new Polygon();
+      bottom.addPoint(920,350);
+      bottom.addPoint(860,470);
+      bottom.addPoint(990,470);
+      g.fillPolygon(bottom);
+   }
+}
